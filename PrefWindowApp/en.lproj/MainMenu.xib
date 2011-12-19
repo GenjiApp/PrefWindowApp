@@ -1310,15 +1310,16 @@
 						<object class="NSTextField" id="615653728">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{196, 171}, {88, 17}}</string>
+							<string key="NSFrame">{{52, 171}, {376, 17}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:3944</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="951043319">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">Main Window</string>
+								<string key="NSContents">Choose "Preferences..." menu item from Application menu.</string>
 								<object class="NSFont" key="NSSupport" id="464388769">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
@@ -1349,6 +1350,7 @@
 					</array>
 					<string key="NSFrameSize">{480, 360}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="615653728"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
@@ -1425,11 +1427,11 @@
 							<int key="NSToolbarItemVisibilityPriority">0</int>
 						</object>
 					</dictionary>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="551444214"/>
 						<reference ref="279210998"/>
 					</array>
-					<array class="NSMutableArray" key="NSToolbarIBDefaultItems">
+					<array key="NSToolbarIBDefaultItems">
 						<reference ref="551444214"/>
 						<reference ref="279210998"/>
 					</array>
@@ -1437,12 +1439,9 @@
 				</object>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="429170716">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<string key="NSFrameSize">{276, 378}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView"/>
 					<string key="NSReuseIdentifierKey">_NS:207</string>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
@@ -1450,7 +1449,7 @@
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomView" id="873184387">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="909422300">
@@ -1458,7 +1457,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{157, 141}, {86, 17}}</string>
 						<reference key="NSSuperview" ref="873184387"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:3944</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="604755777">
@@ -1474,13 +1472,12 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{400, 300}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="909422300"/>
 				<string key="NSReuseIdentifierKey">_NS:1192</string>
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSCustomView" id="199628440">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="939861659">
@@ -1488,7 +1485,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{270, 191}, {99, 17}}</string>
 						<reference key="NSSuperview" ref="199628440"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:3944</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="683008848">
@@ -1504,7 +1500,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{640, 400}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="939861659"/>
 				<string key="NSReuseIdentifierKey">_NS:1192</string>
 				<string key="NSClassName">NSView</string>
