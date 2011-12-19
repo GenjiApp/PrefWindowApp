@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'PrefWindowApp' target in the 'PrefWindowApp' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
