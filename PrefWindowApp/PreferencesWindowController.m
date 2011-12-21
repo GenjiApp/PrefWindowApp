@@ -69,15 +69,9 @@
   }
 
   NSRect windowFrame = [window frame];
-  NSRect contentFrame = [contentView frame];
-  CGFloat windowAccessoryHeight = windowFrame.size.height - contentFrame.size.height;
-  CGFloat newWindowWidth = [newView frame].size.width;
-  CGFloat newWindowHeight = windowAccessoryHeight + [newView frame].size.height;
-  CGFloat newWindowOrginY = windowFrame.origin.y + windowFrame.size.height - newWindowHeight;
-  NSRect newWindowFrame = NSMakeRect(windowFrame.origin.x,
-                                     newWindowOrginY,
-                                     newWindowWidth,
-                                     newWindowHeight);
+  NSRect newWindowFrame = [window frameRectForContentRect:[newView frame]];
+  newWindowFrame.origin.x = windowFrame.origin.x;
+  newWindowFrame.origin.y = windowFrame.origin.y + windowFrame.size.height - newWindowFrame.size.height;
   [window setFrame:newWindowFrame display:YES animate:YES];
 
   [contentView addSubview:newView];
