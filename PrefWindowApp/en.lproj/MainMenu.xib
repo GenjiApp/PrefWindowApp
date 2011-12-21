@@ -1318,7 +1318,7 @@
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
 								<string key="NSContents">Choose "Preferences..." menu item from Application menu.</string>
-								<object class="NSFont" key="NSSupport" id="464388769">
+								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">13</double>
 									<int key="NSfFlags">1044</int>
@@ -1435,12 +1435,9 @@
 				</object>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="429170716">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<string key="NSFrameSize">{276, 378}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
-					<reference key="NSNextKeyView"/>
 					<string key="NSReuseIdentifierKey">_NS:207</string>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
@@ -1448,21 +1445,27 @@
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomView" id="873184387">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="909422300">
 						<reference key="NSNextResponder" ref="873184387"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{157, 141}, {86, 17}}</string>
+						<string key="NSFrame">{{24, 117}, {351, 66}}</string>
 						<reference key="NSSuperview" ref="873184387"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:3944</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="604755777">
 							<int key="NSCellFlags">68288064</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents">General View</string>
-							<reference key="NSSupport" ref="464388769"/>
+							<object class="NSFont" key="NSSupport" id="59596536">
+								<string key="NSName">LucidaGrande</string>
+								<double key="NSSize">55</double>
+								<int key="NSfFlags">16</int>
+							</object>
 							<string key="NSCellIdentifier">_NS:3944</string>
 							<reference key="NSControlView" ref="909422300"/>
 							<reference key="NSBackgroundColor" ref="577398292"/>
@@ -1471,26 +1474,30 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{400, 300}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="909422300"/>
 				<string key="NSReuseIdentifierKey">_NS:1192</string>
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSCustomView" id="199628440">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="939861659">
 						<reference key="NSNextResponder" ref="199628440"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{270, 191}, {99, 17}}</string>
+						<string key="NSFrame">{{117, 167}, {406, 66}}</string>
 						<reference key="NSSuperview" ref="199628440"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:3944</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="683008848">
 							<int key="NSCellFlags">68288064</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents">Advanced View</string>
-							<reference key="NSSupport" ref="464388769"/>
+							<reference key="NSSupport" ref="59596536"/>
 							<string key="NSCellIdentifier">_NS:3944</string>
 							<reference key="NSControlView" ref="939861659"/>
 							<reference key="NSBackgroundColor" ref="577398292"/>
@@ -1499,6 +1506,8 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{640, 400}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="939861659"/>
 				<string key="NSReuseIdentifierKey">_NS:1192</string>
 				<string key="NSClassName">NSView</string>
@@ -3297,6 +3306,7 @@
 							<reference ref="909422300"/>
 						</array>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">General View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">564</int>
@@ -3305,6 +3315,7 @@
 							<reference ref="939861659"/>
 						</array>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">Advanced View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">567</int>
