@@ -133,7 +133,7 @@
 		B61EE7B2149F7955007277D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = B61EE7B5149F7955007277D0 /* Build configuration list for PBXProject "PrefWindowApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -254,6 +254,7 @@
 		B61EE7DA149F7955007277D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrefWindowApp/PrefWindowApp-Prefix.pch";
 				INFOPLIST_FILE = "PrefWindowApp/PrefWindowApp-Info.plist";
@@ -265,6 +266,7 @@
 		B61EE7DB149F7955007277D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PrefWindowApp/PrefWindowApp-Prefix.pch";
 				INFOPLIST_FILE = "PrefWindowApp/PrefWindowApp-Info.plist";
