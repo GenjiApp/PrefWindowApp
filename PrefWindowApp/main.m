@@ -2,8 +2,8 @@
 //  main.m
 //  PrefWindowApp
 //
-//  Created by Genji on 11/12/19.
-//  Copyright (c) 2011 Genji App. All rights reserved.
+//  Created by Genji on 2012/10/21.
+//
 //
 
 #import <Cocoa/Cocoa.h>

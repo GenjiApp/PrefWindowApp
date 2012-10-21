@@ -2,40 +2,70 @@
 //  PreferencesWindowController.m
 //  PrefWindowApp
 //
-//  Created by Genji on 11/12/19.
-//  Copyright (c) 2011 Genji App. All rights reserved.
+//  Created by Genji on 2012/10/21.
+//
 //
 
 #import "PreferencesWindowController.h"
 
+#pragma mark PreferencesPanel
+@implementation PreferencesPanel
+
+- (BOOL)canBecomeMainWindow
+{
+  return YES;
+}
+
+@end
+
+
+#pragma mark -
+#pragma mark PreferencesWindowController
+enum PreferencesViewType {
+  kPreferencesViewTypeGeneral = 100,
+  kPreferencesViewTypeAdvanced,
+};
+typedef NSInteger PreferencesViewType;
+
+@interface PreferencesWindowController ()
+
+@property (weak) IBOutlet NSView *generalView;
+@property (weak) IBOutlet NSView *advancedView;
+
+- (IBAction)switchView:(id)sender;
+
+@end
+
 @implementation PreferencesWindowController
 
-- (id)initWithWindow:(NSWindow *)window
++ (PreferencesWindowController *)sharedPreferencesWindowController
 {
-  self = [super initWithWindow:window];
-  if (self) {
-    // Initialization code here.
+  static PreferencesWindowController *sharedController = nil;
+  if(sharedController == nil) {
+    sharedController = [[PreferencesWindowController alloc] init];
   }
-  
+  return sharedController;
+}
+
+- (id)init
+{
+  self = [super initWithWindowNibName:@"PreferencesWindowController"];
+  if(self) {
+    // Initialize
+  }
   return self;
 }
 
 - (void)windowDidLoad
 {
   [super windowDidLoad];
-  
-  // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
-}
 
-- (void)awakeFromNib
-{
   NSWindow *window = [self window];
   NSToolbar *toolbar = [window toolbar];
   NSArray *toolbarItems = [toolbar items];
-  NSToolbarItem *item = [toolbarItems objectAtIndex:0];
-
-  [toolbar setSelectedItemIdentifier:[item itemIdentifier]];
-  [self switchView:item];
+  NSToolbarItem *leftmostToolbarItem = [toolbarItems objectAtIndex:0];
+  [toolbar setSelectedItemIdentifier:[leftmostToolbarItem itemIdentifier]];
+  [self switchView:leftmostToolbarItem];
   [window center];
 }
 
@@ -43,6 +73,15 @@
 #pragma mark Action Method
 - (IBAction)switchView:(id)sender
 {
+  NSToolbarItem *item = (NSToolbarItem *)sender;
+  PreferencesViewType viewType = [item tag];
+  NSView *newView = nil;
+  switch(viewType) {
+    case kPreferencesViewTypeGeneral: newView = self.generalView; break;
+    case kPreferencesViewTypeAdvanced: newView = self.advancedView; break;
+    default: return;
+  }
+
   NSWindow *window = [self window];
   NSView *contentView = [window contentView];
 
@@ -52,21 +91,7 @@
     [currentView removeFromSuperview];
   }
 
-  NSToolbarItem *item = (NSToolbarItem *)sender;
-  NSString *title = [item label];
-  [window setTitle:title];
-
-  NSView *newView = nil;
-  switch([item tag]) {
-    case PreferencesViewGeneral:
-      newView = generalView_;
-      break;
-    case PreferencesViewAdvanced:
-      newView = advancedView_;
-      break;
-    default:
-      return;
-  }
+  [window setTitle:[item label]];
 
   NSRect windowFrame = [window frame];
   NSRect newWindowFrame = [window frameRectForContentRect:[newView frame]];
@@ -76,5 +101,4 @@
 
   [contentView addSubview:newView];
 }
-
 @end
