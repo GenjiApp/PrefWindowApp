@@ -87,12 +87,8 @@ typedef NSInteger PreferencesViewType;
 
   NSWindow *window = [self window];
   NSView *contentView = [window contentView];
-
   NSArray *subviews = [contentView subviews];
-  if([subviews count]) {
-    NSView *currentView = [subviews objectAtIndex:0];
-    [currentView removeFromSuperview];
-  }
+  for(NSView *subview in subviews) [subview removeFromSuperview];
 
   [window setTitle:[item label]];
 
@@ -104,4 +100,5 @@ typedef NSInteger PreferencesViewType;
 
   [contentView addSubview:newView];
 }
+
 @end
