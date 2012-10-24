@@ -13,6 +13,12 @@
 
 - (void)cancelOperation:(id)sender { [self close]; }
 
+- (BOOL)validateUserInterfaceItem:(id<NSValidatedUserInterfaceItem>)anItem
+{
+  if([anItem action] == @selector(toggleToolbarShown:)) return NO;
+  return [super validateUserInterfaceItem:anItem];
+}
+
 @end
 
 
