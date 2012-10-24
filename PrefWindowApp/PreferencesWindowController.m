@@ -8,13 +8,10 @@
 
 #import "PreferencesWindowController.h"
 
-#pragma mark PreferencesPanel
-@implementation PreferencesPanel
+#pragma mark PreferencesWindow
+@implementation PreferencesWindow
 
-- (BOOL)canBecomeMainWindow
-{
-  return YES;
-}
+- (void)cancelOperation:(id)sender { [self close]; }
 
 @end
 

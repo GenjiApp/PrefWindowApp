@@ -43,7 +43,7 @@
 				<string key="NSWindowRect">{{196, 240}, {480, 270}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">Window</string>
-				<string key="NSWindowClass">PreferencesPanel</string>
+				<string key="NSWindowClass">PreferencesWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="38865093">
 					<object class="NSMutableString" key="NSToolbarIdentifier">
 						<characters key="NS.bytes">3303F33D-FE38-4E24-ACFE-1828919A089C</characters>
@@ -101,11 +101,11 @@
 							<int key="NSToolbarItemVisibilityPriority">0</int>
 						</object>
 					</dictionary>
-					<array class="NSMutableArray" key="NSToolbarIBAllowedItems">
+					<array key="NSToolbarIBAllowedItems">
 						<reference ref="7139747"/>
 						<reference ref="232644424"/>
 					</array>
-					<array class="NSMutableArray" key="NSToolbarIBDefaultItems">
+					<array key="NSToolbarIBDefaultItems">
 						<reference ref="7139747"/>
 						<reference ref="232644424"/>
 					</array>
@@ -118,13 +118,14 @@
 					<string key="NSFrameSize">{480, 270}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
+					<reference key="NSNextKeyView"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomView" id="695818085">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="676692010">
@@ -132,7 +133,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{157, 141}, {86, 17}}</string>
 						<reference key="NSSuperview" ref="695818085"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="411486200">
@@ -169,13 +169,12 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{400, 300}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="676692010"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="NSClassName">NSView</string>
 			</object>
 			<object class="NSCustomView" id="377859815">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="NSTextField" id="347937160">
@@ -183,7 +182,6 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrame">{{250, 231}, {99, 17}}</string>
 						<reference key="NSSuperview" ref="377859815"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:1535</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="697104338">
@@ -200,7 +198,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{600, 480}</string>
-				<reference key="NSSuperview"/>
 				<reference key="NSNextKeyView" ref="347937160"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="NSClassName">NSView</string>
@@ -391,11 +388,11 @@
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">PreferencesPanel</string>
-					<string key="superclassName">NSPanel</string>
+					<string key="className">PreferencesWindow</string>
+					<string key="superclassName">NSWindow</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/PreferencesPanel.h</string>
+						<string key="minorKey">./Classes/PreferencesWindow.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PreferencesPanel : NSPanel
+@interface PreferencesWindow : NSWindow
 
 @end
 
